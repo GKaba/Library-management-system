@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainEmployee" prefHeight="690.0" prefWidth="906.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.BibMenuController">
+   <children>
+      <AnchorPane layoutY="-2.0" prefHeight="547.0" prefWidth="202.0">
+         <children>
+            <Pane prefHeight="696.0" prefWidth="164.0" style="-fx-background-color: #2e3131;" AnchorPane.bottomAnchor="-149.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Pane prefHeight="69.0" prefWidth="164.0" style="-fx-background-color: #2F4E6F;">
+                     <effect>
+                        <DropShadow color="#0000009c" height="14.83" radius="3.2075" width="0.0" />
+                     </effect>
+                     <children>
+                        <Label layoutX="15.0" layoutY="15.0" prefHeight="40.0" prefWidth="135.0" text="Employee Panel">
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="0.5238095238095238" endY="1.0" startX="0.5095238095238095">
+                                 <stops>
+                                    <Stop color="#f7f9fc" />
+                                    <Stop color="#f7f9fc" offset="0.02587194375320931" />
+                                    <Stop color="#659cef" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <JFXButton layoutX="5.0" layoutY="124.0" onAction="#document" prefHeight="29.0" prefWidth="153.0" stylesheets="@../Style/Menu.css" text="Documents         ">
+                     <graphic>
+                        <MaterialDesignIconView fill="#4f7fae" glyphName="LIBRARY_BOOKS" size="21" strokeType="INSIDE" wrappingWidth="21.0" />
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="5.0" layoutY="170.0" onAction="#historique" prefHeight="29.0" prefWidth="153.0" stylesheets="@../Style/Menu.css" text="Historique           ">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="#4f7fae" glyphName="HISTORY" size="21" wrappingWidth="21.14285659790039" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="5.0" layoutY="318.0" onAction="#ajouterMembrePane" prefHeight="29.0" prefWidth="153.0" stylesheets="@../Style/Menu.css" text="Ajouter Membre ">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="#4f7fae" glyphName="ACCOUNT_PLUS" size="21" wrappingWidth="23.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="8.0" layoutY="552.0" onAction="#deconnecter" prefHeight="30.0" prefWidth="146.0" stylesheets="@../Style/Menu.css" text="Deconnecter">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                     <graphic>
+                        <OctIconView fill="#cf3c42" glyphName="SIGN_OUT" size="21" wrappingWidth="40.00000071525574" />
+                     </graphic>
+                  </JFXButton>
+                  <Label fx:id="title" layoutX="54.0" layoutY="508.0" prefHeight="30.0" prefWidth="95.0" textFill="#f8f8f8">
+                     <font>
+                        <Font name="Century Gothic" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXButton ellipsisString="" layoutX="5.0" layoutY="446.0" onAction="#parametres" prefHeight="30.0" prefWidth="146.0" stylesheets="@../Style/Menu.css" text="Paramétres        ">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="#4f7fae" glyphName="SETTINGS" size="22" wrappingWidth="21.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="5.0" layoutY="361.0" onAction="#modifierMembrePane" prefHeight="29.0" prefWidth="153.0" stylesheets="@../Style/Menu.css" text="Modifier Membre">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="#4f7fae" glyphName="PENCIL" size="21" wrappingWidth="21.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="5.0" layoutY="280.0" onAction="#membres" prefHeight="29.0" prefWidth="153.0" stylesheets="@../Style/Menu.css" text="Membres              ">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="#4f7fae" glyphName="ACCOUNT_MULTIPLE" size="21" wrappingWidth="21.0" />
+                     </graphic>
+                  </JFXButton>
+                  <Pane layoutX="34.0" layoutY="496.0" prefHeight="1.0" prefWidth="95.0" style="-fx-background-color: #5d5d5d;" />
+               </children>
+            </Pane>
+            <MaterialDesignIconView fill="#4f7fae" glyphName="ACCOUNT_CIRCLE" layoutX="15.0" layoutY="535.0" size="25" />
+            <Pane layoutX="34.0" layoutY="261.0" prefHeight="1.0" prefWidth="95.0" style="-fx-background-color: #5d5d5d;" />
+            <Pane layoutX="34.0" layoutY="419.0" prefHeight="1.0" prefWidth="95.0" style="-fx-background-color: #5d5d5d;" />
+         </children>
+      </AnchorPane>
+      <Pane fx:id="parametres" layoutX="161.0" layoutY="-2.0" prefHeight="683.0" prefWidth="761.0" style="-fx-background-color: #ecf0f1;">
+         <children>
+            <Pane prefHeight="69.0" prefWidth="761.0" style="-fx-background-color: #2e3131;">
+               <children>
+                  <Label layoutX="325.0" layoutY="20.0" prefHeight="30.0" prefWidth="139.0" text="Paramétres">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="21.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.5238095238095238" endY="1.0" startX="0.5238095238095237">
+                           <stops>
+                              <Stop color="#f7f9fc" />
+                              <Stop color="#f7f9fc" offset="0.007662835249042145" />
+                              <Stop color="#659cef" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <MaterialDesignIconView glyphName="SETTINGS" layoutX="267.0" layoutY="50.0" size="40">
+                     <fill>
+                        <LinearGradient endX="0.5238095238095238" endY="1.0" startX="0.5238095238095237">
+                           <stops>
+                              <Stop color="#f7f9fc" />
+                              <Stop color="#f7f9fc" offset="0.007662835249042145" />
+                              <Stop color="#659cef" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </MaterialDesignIconView>
+               </children>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" color="#00000051" height="11.4" radius="2.35" width="0.0" />
+               </effect>
+            </Pane>
+            <Pane layoutX="52.0" layoutY="120.0" prefHeight="262.0" prefWidth="648.0" style="-fx-background-color: #ffffff;">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#00000025" height="15.07" radius="7.7775" width="18.04" />
+               </effect>
+               <children>
+                  <JFXTextField fx:id="surnmModif" focusColor="#67809f" layoutX="217.0" layoutY="35.0" unFocusColor="#67809fc2" />
+                  <Label layoutX="38.0" layoutY="46.0" text="Sur nom* :" textFill="#393939">
+                     <font>
+                        <Font name="Century Gothic" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="510.0" layoutY="214.0" onAction="#utilisateurModif" prefHeight="27.0" prefWidth="100.0" stylesheets="@../Style/authent.css" text="Modifier">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <FontAwesomeIconView glyphName="USER" layoutX="14.0" layoutY="24.0" size="16" />
+                  <Label layoutX="36.0" layoutY="11.0" prefHeight="16.0" prefWidth="121.0" text="Nom utilisateur" textFill="#393939">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pseudomodifechec" layoutX="36.0" layoutY="83.0" prefHeight="17.0" prefWidth="275.0" textFill="#da3c3c">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pseudomodifsucce" layoutX="36.0" layoutY="83.0" prefHeight="17.0" prefWidth="254.0" textFill="#3ed93d">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="telephoneModif" focusColor="#67809f" layoutX="217.0" layoutY="84.0" unFocusColor="#67809fc2" />
+                  <Label layoutX="38.0" layoutY="95.0" text="Telephone" textFill="#393939">
+                     <font>
+                        <Font name="Century Gothic" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="adresseModif" focusColor="#67809f" layoutX="217.0" layoutY="135.0" unFocusColor="#67809fc2" />
+                  <Label layoutX="38.0" layoutY="146.0" text="Adresse" textFill="#393939">
+                     <font>
+                        <Font name="Century Gothic" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="52.0" layoutY="402.0" prefHeight="234.0" prefWidth="648.0" style="-fx-background-color: #ffffff;">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#00000025" height="15.07" radius="7.7775" width="18.04" />
+               </effect>
+               <children>
+                  <Label layoutX="37.0" layoutY="62.0" text="mot de passe *:" textFill="#393939">
+                     <font>
+                        <Font name="Century Gothic" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="510.0" layoutY="193.0" onAction="#uMotpassModif" prefHeight="27.0" prefWidth="100.0" stylesheets="@../Style/authent.css" text="Modifier">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="37.0" layoutY="108.0" text="nouveau mot de passe *:" textFill="#393939">
+                     <font>
+                        <Font name="Century Gothic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="37.0" layoutY="157.0" text="Confirmer *: " textFill="#393939">
+                     <font>
+                        <Font name="Century Gothic" size="13.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="KEY" layoutX="15.0" layoutY="28.0" size="16" />
+                  <Label layoutX="37.0" layoutY="15.0" prefHeight="16.0" prefWidth="121.0" text="Mot de passe" textFill="#393939">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="motpassmodifechec" layoutX="31.0" layoutY="198.0" prefHeight="17.0" prefWidth="275.0" textFill="#da3c3c">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="motpassmodifsucce" layoutX="31.0" layoutY="198.0" prefHeight="17.0" prefWidth="254.0" textFill="#3ed93d">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXPasswordField fx:id="oldMotPass" focusColor="#67809f" layoutX="215.0" layoutY="50.0" unFocusColor="#67809f" />
+                  <JFXPasswordField fx:id="newMotPass" focusColor="#67809f" layoutX="215.0" layoutY="96.0" unFocusColor="#67809f" />
+                  <JFXPasswordField fx:id="confirmerMotPass" focusColor="#67809f" layoutX="215.0" layoutY="143.0" unFocusColor="#67809f" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="historique" layoutX="160.0" layoutY="-2.0" prefHeight="690.0" prefWidth="761.0" style="-fx-background-color: #ecf0f1;">
+         <children>
+            <Pane prefHeight="69.0" prefWidth="761.0" style="-fx-background-color: #2e3131;">
+               <children>
+                  <Label layoutX="241.0" layoutY="20.0" prefHeight="30.0" prefWidth="337.0" text="Historique et gestion des retours">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="21.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.5238095238095238" endY="1.0" startX="0.5238095238095237">
+                           <stops>
+                              <Stop color="#f7f9fc" />
+                              <Stop color="#f7f9fc" offset="0.02587194375320931" />
+                              <Stop color="#659cef" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <FontAwesomeIconView glyphName="HISTORY" layoutX="199.0" layoutY="49.0" size="34" wrappingWidth="17.142849639058113">
+                     <fill>
+                        <LinearGradient endX="0.5238095238095238" endY="1.0" startX="0.5095238095238095">
+                           <stops>
+                              <Stop color="#f7f9fc" />
+                              <Stop color="#f7f9fc" offset="0.02587194375320931" />
+                              <Stop color="#659cef" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </FontAwesomeIconView>
+               </children>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" color="#00000051" height="11.4" radius="2.35" width="0.0" />
+               </effect>
+            </Pane>
+            <Pane layoutX="23.0" layoutY="82.0" prefHeight="126.0" prefWidth="697.0" style="-fx-background-color: #ffffff;">
+               <effect>
+                  <DropShadow color="#00000053" height="9.14" radius="4.07" width="9.14" />
+               </effect>
+               <children>
+                  <FontAwesomeIconView fill="#393939" glyphName="AREA_CHART" layoutX="9.0" layoutY="19.0" size="15" />
+                  <Label layoutX="36.0" layoutY="6.0" prefHeight="16.0" prefWidth="86.0" text="Statistiques" textFill="#393939">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="18.0" layoutY="31.0" prefHeight="86.0" prefWidth="171.0" style="-fx-background-color: #67809f;">
+                     <children>
+                        <Pane prefHeight="27.0" prefWidth="171.0" style="-fx-background-color: #2e3131;">
+                           <children>
+                              <Label layoutX="4.0" layoutY="-6.0" prefHeight="40.0" prefWidth="211.0" text="Livre emprunter" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <MaterialDesignIconView fill="WHITE" glyphName="BOOK_OPEN_VARIANT" layoutX="40.0" layoutY="71.0" size="40" />
+                        <Label fx:id="totalelivre" layoutX="90.0" layoutY="36.0" prefHeight="40.0" prefWidth="86.0" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" color="#0000008e" height="15.07" radius="7.035" width="15.07" />
+                     </effect>
+                  </Pane>
+                  <Pane layoutX="263.0" layoutY="31.0" prefHeight="86.0" prefWidth="171.0" style="-fx-background-color: #9e9d66;">
+                     <children>
+                        <Pane prefHeight="27.0" prefWidth="171.0" style="-fx-background-color: #2e3131;">
+                           <children>
+                              <Label fx:id="totalemagazin" layoutX="4.0" layoutY="-6.0" prefHeight="40.0" prefWidth="211.0" text="Magazine emprunter" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <MaterialDesignIconView fill="WHITE" glyphName="BOOK_OPEN" layoutX="45.0" layoutY="71.0" size="40" />
+                        <Label fx:id="totalemagazine" layoutX="95.0" layoutY="36.0" prefHeight="40.0" prefWidth="86.0" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" color="#0000008e" height="15.07" radius="7.035" width="15.07" />
+                     </effect>
+                  </Pane>
+                  <Pane layoutX="502.0" layoutY="31.0" prefHeight="86.0" prefWidth="171.0" style="-fx-background-color: #9b6565;">
+                     <children>
+                        <Pane prefHeight="27.0" prefWidth="171.0" style="-fx-background-color: #2e3131;">
+                           <children>
+                              <Label layoutX="4.0" layoutY="-6.0" prefHeight="40.0" prefWidth="211.0" text="Dictionnaire emprunter" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BOOK" layoutX="52.0" layoutY="70.0" size="37" />
+                        <Label fx:id="totaledictionnaire" layoutX="98.0" layoutY="36.0" prefHeight="40.0" prefWidth="86.0" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" color="#0000008e" height="15.07" radius="7.035" width="15.07" />
+                     </effect>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane layoutX="23.0" layoutY="223.0" prefHeight="353.0" prefWidth="697.0" style="-fx-background-color: #ffffff;">
+               <effect>
+                  <DropShadow color="#00000053" height="9.14" radius="4.07" width="9.14" />
+               </effect>
+               <children>
+                  <FontAwesomeIconView fill="#393939" glyphName="HISTORY" layoutX="9.0" layoutY="27.0" size="15" />
+                  <Label layoutX="28.0" layoutY="14.0" prefHeight="16.0" prefWidth="171.0" text="Historique des empruntes" textFill="#393939">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tableuHistorique" layoutX="-2.0" layoutY="52.0" onMouseClicked="#selectionHistorique" prefHeight="280.0" prefWidth="700.0" stylesheets="@../Style/tableu.css">
+                     <columns>
+                        <TableColumn fx:id="num_enrgH" prefWidth="158.0" text="Numero d'eregistrement" />
+                        <TableColumn fx:id="isbnH" prefWidth="74.0" sortable="false" text="ISBN" />
+                        <TableColumn fx:id="titreH" prefWidth="93.0" text="Titre" />
+                        <TableColumn fx:id="typeH" prefWidth="161.0" text="Type document" />
+                        <TableColumn fx:id="dateEH" prefWidth="122.0" text="Date d'emprunte" />
+                        <TableColumn fx:id="dateRH" prefWidth="113.0" text="Date retour" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <JFXButton layoutX="586.0" layoutY="9.0" onAction="#chercherHistorique" prefHeight="27.0" prefWidth="86.0" stylesheets="@../Style/authent.css" text="Chercher">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <TextField fx:id="cherchehistorique" layoutX="227.0" layoutY="9.0" prefHeight="27.0" prefWidth="183.0" promptText="ID Membre" style="-fx-background-color: #ffffff; -fx-border-color: #67809f; -fx-border-radius: 2em;">
+                     <font>
+                        <Font name="Century Gothic" size="11.0" />
+                     </font>
+                  </TextField>
+                  <FontAwesomeIconView fill="#67809f" glyphName="SEARCH" layoutX="388.0" layoutY="27.0" size="15" />
+               </children>
+            </Pane>
+            <Pane layoutX="23.0" layoutY="591.0" prefHeight="78.0" prefWidth="697.0" style="-fx-background-color: #ffffff;">
+               <effect>
+                  <DropShadow color="#00000053" height="9.14" radius="4.07" width="9.14" />
+               </effect>
+               <children>
+                  <JFXButton fx:id="retourB" disable="true" layoutX="589.0" layoutY="29.0" onAction="#retour" prefHeight="27.0" prefWidth="86.0" stylesheets="@../Style/retour.css" text="Retour">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <FontAwesomeIconView fill="#393939" glyphName="CART_PLUS" layoutX="9.0" layoutY="19.0" size="15" />
+                  <Label layoutX="28.0" layoutY="6.0" prefHeight="16.0" prefWidth="171.0" text="retour" textFill="#393939">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="secceretour" layoutX="28.0" layoutY="34.0" prefHeight="17.0" prefWidth="419.0" textFill="#4fb945">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="echecretour" layoutX="23.0" layoutY="34.0" prefHeight="17.0" prefWidth="396.0" textFill="#da3c3c">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="modifMembre" layoutX="201.0" layoutY="-2.0" prefHeight="683.0" prefWidth="673.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Pane layoutX="-41.0" prefHeight="69.0" prefWidth="761.0" style="-fx-background-color: #2e3131;">
+               <children>
+                  <Label layoutX="233.0" layoutY="20.0" prefHeight="30.0" prefWidth="351.0" text="Modifier et supprimer un Membre">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="21.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.5238095238095238" endY="1.0" startX="0.5238095238095237">
+                           <stops>
+                              <Stop color="#f7f9fc" />
+                              <Stop color="#f7f9fc" offset="0.007662835249042145" />
+                              <Stop color="#659cef" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <MaterialDesignIconView glyphName="PENCIL" layoutX="179.0" layoutY="50.0" size="40">
+                     <fill>
+                        <LinearGradient endX="0.5238095238095238" endY="1.0" startX="0.5142857142857142">
+                           <stops>
+                              <Stop color="#f7f9fc" />
+                              <Stop color="#f7f9fc" offset="0.007662835249042145" />
+                              <Stop color="#659cef" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </MaterialDesignIconView>
+                  <Pane layoutY="69.0" prefHeight="51.0" prefWidth="761.0" style="-fx-background-color: #2F4E6F;">
+                     <children>
+                        <Label layoutX="339.0" layoutY="10.0" prefHeight="31.0" prefWidth="83.0" text="Membre" textFill="#fffdfd">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" color="#00000051" height="11.4" radius="2.35" width="0.0" />
+               </effect>
+            </Pane>
+            <Pane layoutX="-40.0" layoutY="120.0" prefHeight="577.0" prefWidth="761.0" style="-fx-background-color: #ecf0f1;">
+               <children>
+                  <Pane layoutX="34.0" layoutY="114.0" prefHeight="443.0" prefWidth="676.0" style="-fx-background-color: #ffffff;">
+                     <effect>
+                        <DropShadow color="#00000053" height="9.14" radius="4.07" width="9.14" />
+                     </effect>
+                     <children>
+                        <Label layoutX="28.0" layoutY="6.0" prefHeight="16.0" prefWidth="222.0" text="Modifier/supprimer un Membre" textFill="#393939">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txt_mCode_m" disable="true" labelFloat="true" layoutX="107.0" layoutY="52.0" maxWidth="193.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" text="   " />
+                        <JFXTextField fx:id="txt_mnom_m" labelFloat="true" layoutX="107.0" layoutY="118.0" maxWidth="193.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" text="   " />
+                        <JFXTextField fx:id="txt_mprenom_m" labelFloat="true" layoutX="107.0" layoutY="191.0" maxWidth="193.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" text="   " />
+                        <JFXTextField fx:id="txt_madresse_m" labelFloat="true" layoutX="107.0" layoutY="264.0" maxWidth="193.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" text="   " />
+                        <JFXTextField fx:id="txt_mtel_m" labelFloat="true" layoutX="107.0" layoutY="340.0" maxWidth="193.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" text="   " />
+                        <JFXButton fx:id="btn_mmodifier_m" disable="true" layoutX="536.0" layoutY="389.0" onAction="#modifirMembre" prefHeight="27.0" prefWidth="108.0" stylesheets="@../Style/modifier.css" text="Modifier">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                           <graphic>
+                              <MaterialDesignIconView disable="true" fill="WHITE" glyphName="AUTORENEW" size="17" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXTextField fx:id="txt_mid_m" labelFloat="true" layoutX="469.0" layoutY="55.0" maxWidth="193.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" />
+                        <MaterialDesignIconView glyphName="PENCIL" layoutX="9.0" layoutY="22.0" size="18" />
+                        <Label disable="true" layoutX="23.0" layoutY="61.0" prefHeight="18.0" prefWidth="49.0" text="Code:" textFill="#616161">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="125.0" prefHeight="18.0" prefWidth="62.0" text="Nom*:" textFill="#616161">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="22.0" layoutY="198.0" prefHeight="18.0" prefWidth="66.0" text="Prenom*:" textFill="#616161">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="22.0" layoutY="270.0" prefHeight="18.0" prefWidth="70.0" text="Adresse:" textFill="#616161">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="347.0" prefHeight="18.0" prefWidth="86.0" text="Telephone *:" textFill="#616161">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="337.0" layoutY="62.0" prefHeight="18.0" prefWidth="139.0" text="ID Membre*:" textFill="#616161">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="btn_msupprimer_m" disable="true" layoutX="407.0" layoutY="389.0" onAction="#supprimerMembre" prefHeight="27.0" prefWidth="108.0" stylesheets="@../Style/supprimer.css" text="Supprimer">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                           <graphic>
+                              <MaterialDesignIconView fill="WHITE" glyphName="DELETE" size="17" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXTextField fx:id="txt_mnbEprunter_m" disable="true" labelFloat="true" layoutX="479.0" layoutY="119.0" maxWidth="193.0" minWidth="183.0" prefHeight="31.0" prefWidth="183.0" />
+                        <Label layoutX="337.0" layoutY="126.0" prefHeight="18.0" prefWidth="135.0" text="Nombre emprunter:" textFill="#616161">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="34.0" layoutY="14.0" prefHeight="88.0" prefWidth="676.0" style="-fx-background-color: #ffffff;">
+                     <effect>
+                        <DropShadow color="#00000053" height="9.14" radius="4.07" width="9.14" />
+                     </effect>
+                     <children>
+                        <JFXButton fx:id="btn_mchercher_m" layoutX="548.0" layoutY="36.0" onAction="#getMembreById" prefHeight="27.0" prefWidth="95.0" stylesheets="@../Style/authent.css" text="Chercher">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <TextField fx:id="txt_mchercher_m" layoutX="80.0" layoutY="36.0" prefHeight="27.0" prefWidth="222.0" promptText="Chercher par son Id" style="-fx-background-color: #ffffff; -fx-border-color: #659CEF; -fx-border-radius: 2em;">
+                           <font>
+                              <Font name="Century Gothic" size="11.0" />
+                           </font>
+                        </TextField>
+                        <FontAwesomeIconView fill="#659cef" glyphName="SEARCH" layoutX="272.0" layoutY="54.0" size="15" />
+                        <FontAwesomeIconView fill="#393939" glyphName="SEARCH" layoutX="9.0" layoutY="19.0" size="15" />
+                        <Label layoutX="28.0" layoutY="6.0" prefHeight="16.0" prefWidth="214.0" text="Chercher Membre par Id" textFill="#393939">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="membres" layoutX="201.0" layoutY="-2.0" prefHeight="683.0" prefWidth="674.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Pane layoutX="-41.0" prefHeight="69.0" prefWidth="761.0" style="-fx-background-color: #2e3131;">
+               <children>
+                  <Label layoutX="326.0" layoutY="20.0" prefHeight="30.0" prefWidth="139.0" text="Membres">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="21.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.5238095238095238" endY="1.0" startX="0.519047619047619">
+                           <stops>
+                              <Stop color="#f7f9fc" />
+                              <Stop color="#f7f9fc" offset="0.02587194375320931" />
+                              <Stop color="#659cef" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <MaterialDesignIconView glyphName="ACCOUNT_MULTIPLE" layoutX="272.0" layoutY="50.0" size="40" text="">
+                     <fill>
+                        <LinearGradient endX="0.5238095238095238" endY="1.0" startX="0.519047619047619">
+                           <stops>
+                              <Stop color="#f7f9fc" />
+                              <Stop color="#f7f9fc" offset="0.02587194375320931" />
+                              <Stop color="#659cef" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </MaterialDesignIconView>
+                  <Pane layoutY="69.0" prefHeight="51.0" prefWidth="761.0" style="-fx-background-color: #2F4E6F;">
+                     <children>
+                        <Label layoutX="307.0" layoutY="10.0" prefHeight="31.0" prefWidth="146.0" text="Membres" textFill="#fffdfd">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" color="#00000051" height="11.4" radius="2.35" width="0.0" />
+               </effect>
+            </Pane>
+            <Pane layoutX="-41.0" layoutY="119.0" prefHeight="582.0" prefWidth="761.0" style="-fx-background-color: #ecf0f1;">
+               <children>
+                  <Pane layoutX="34.0" layoutY="22.0" prefHeight="88.0" prefWidth="673.0" style="-fx-background-color: #ffffff;">
+                     <effect>
+                        <DropShadow color="#00000053" height="9.14" radius="4.07" width="9.14" />
+                     </effect>
+                     <children>
+                        <JFXButton fx:id="btn_dchercher_membre" disable="true" layoutX="567.0" layoutY="38.0" onAction="#chercherMembreModif" prefHeight="27.0" prefWidth="86.0" stylesheets="@../Style/authent.css" text="Chercher">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <MenuButton fx:id="menuSelectMembreBy" layoutX="49.0" layoutY="39.0" mnemonicParsing="false" style="-fx-background-color: #659CEF;" text="Chercher par" textFill="#fffbfb">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#chercherMembreTous" text="Tous      " />
+                              <MenuItem mnemonicParsing="false" onAction="#chercherMembreByCode" text="Identité      " />
+                              <MenuItem mnemonicParsing="false" onAction="#chercherMembreByTel" text="Telephone     " />
+                           </items>
+                        </MenuButton>
+                        <FontAwesomeIconView fill="#393939" glyphName="SEARCH" layoutX="9.0" layoutY="19.0" size="15" />
+                        <Label layoutX="28.0" layoutY="6.0" prefHeight="16.0" prefWidth="171.0" text="Chercher un Membre" textFill="#393939">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txt_dchercher_m" disable="true" layoutX="175.0" layoutY="37.0" prefHeight="27.0" prefWidth="183.0" promptText="Chercher" style="-fx-background-color: #ffffff; -fx-border-color: #659CEF; -fx-border-radius: 2em;">
+                           <font>
+                              <Font name="Century Gothic" size="11.0" />
+                           </font>
+                        </TextField>
+                        <FontAwesomeIconView fill="#659cef" glyphName="SEARCH" layoutX="336.0" layoutY="55.0" size="15" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="34.0" layoutY="114.0" prefHeight="426.0" prefWidth="673.0" style="-fx-background-color: #ffffff;">
+                     <effect>
+                        <DropShadow color="#00000053" height="9.14" radius="4.07" width="9.14" />
+                     </effect>
+                     <children>
+                        <FontAwesomeIconView fill="#393939" glyphName="LIST_ALT" layoutX="9.0" layoutY="19.0" size="15" />
+                        <Label layoutX="28.0" layoutY="6.0" prefHeight="16.0" prefWidth="225.0" text="List des Membres" textFill="#393939">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tableuMembre" layoutX="-3.0" layoutY="44.0" prefHeight="382.0" prefWidth="680.0" stylesheets="@../Style/tableu.css">
+                           <columns>
+                              <TableColumn fx:id="code_membre" minWidth="0.0" prefWidth="41.0" text="Identité" />
+                              <TableColumn fx:id="nome" minWidth="0.0" prefWidth="41.0" text="Nom" />
+                              <TableColumn fx:id="prenome" prefWidth="68.0" text="Prenom" />
+                              <TableColumn fx:id="adressee" prefWidth="68.0" text="Adresse" />
+                              <TableColumn fx:id="tele" prefWidth="66.0" text="Telephone" />
+                              <TableColumn fx:id="emprunter" prefWidth="84.0" text="Emprunter" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="ajouterMembre" layoutX="201.0" layoutY="-2.0" prefHeight="683.0" prefWidth="673.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Pane layoutX="-41.0" prefHeight="69.0" prefWidth="761.0" style="-fx-background-color: #2e3131;">
+               <children>
+                  <Label layoutX="291.0" layoutY="20.0" prefHeight="30.0" prefWidth="222.0" text="Ajouter un Membre">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="21.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.5238095238095238" endY="1.0" startX="0.5285714285714286">
+                           <stops>
+                              <Stop color="#f7f9fc" />
+                              <Stop color="#f7f9fc" offset="0.02587194375320931" />
+                              <Stop color="#659cef" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <MaterialDesignIconView glyphName="ACCOUNT_PLUS" layoutX="241.0" layoutY="50.0" size="40">
+                     <fill>
+                        <LinearGradient endX="0.5238095238095238" endY="1.0" startX="0.5047619047619047">
+                           <stops>
+                              <Stop color="#f7f9fc" />
+                              <Stop color="#f7f9fc" offset="0.02587194375320931" />
+                              <Stop color="#659cef" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </MaterialDesignIconView>
+                  <Pane layoutY="69.0" prefHeight="51.0" prefWidth="761.0" style="-fx-background-color: #2F4E6F;">
+                     <children>
+                        <Label layoutX="339.0" layoutY="10.0" prefHeight="31.0" prefWidth="83.0" text="Membre" textFill="#fffdfd">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" color="#00000051" height="11.4" radius="2.35" width="0.0" />
+               </effect>
+            </Pane>
+            <Pane layoutX="-41.0" layoutY="120.0" prefHeight="577.0" prefWidth="761.0" style="-fx-background-color: #ecf0f1;">
+               <children>
+                  <Pane layoutX="52.0" layoutY="22.0" prefHeight="519.0" prefWidth="651.0" style="-fx-background-color: #ffffff;">
+                     <effect>
+                        <DropShadow color="#00000053" height="9.14" radius="4.07" width="9.14" />
+                     </effect>
+                     <children>
+                        <Label layoutX="28.0" layoutY="6.0" prefHeight="16.0" prefWidth="171.0" text="Ajouter un Membre" textFill="#393939">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txt_aIdMembre" labelFloat="true" layoutX="82.0" layoutY="69.0" maxWidth="193.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" promptText="ID de Membre*" />
+                        <JFXTextField fx:id="txt_anom" labelFloat="true" layoutX="82.0" layoutY="144.0" maxWidth="193.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" promptText="Nom*" />
+                        <JFXTextField fx:id="txt_aprenom" labelFloat="true" layoutX="82.0" layoutY="217.0" maxWidth="193.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" promptText="Prenom*" />
+                        <JFXTextField fx:id="txt_aadresse" labelFloat="true" layoutX="418.0" layoutY="144.0" maxWidth="193.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" promptText="Adresse" />
+                        <JFXButton fx:id="btn_majouter" layoutX="489.0" layoutY="438.0" onAction="#ajouterMembre" prefHeight="27.0" prefWidth="99.0" stylesheets="@../Style/modifier.css" text="Ajouter">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="16" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXTextField fx:id="txt_atel" labelFloat="true" layoutX="418.0" layoutY="69.0" maxWidth="193.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" promptText="Numéro de telephone *" />
+                        <Label layoutX="167.0" layoutY="6.0" prefHeight="16.0" prefWidth="171.0" text="(* = obligatoire)" textFill="#b56464">
+                           <font>
+                              <Font name="Century Gothic" size="13.0" />
+                           </font>
+                        </Label>
+                        <MaterialDesignIconView glyphName="ACCOUNT_PLUS" layoutX="9.0" layoutY="22.0" size="18" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="documents" layoutX="201.0" layoutY="-2.0" prefHeight="683.0" prefWidth="674.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Pane layoutX="-41.0" prefHeight="69.0" prefWidth="761.0" style="-fx-background-color: #2e3131;">
+               <children>
+                  <MaterialDesignIconView glyphName="LIBRARY" layoutX="272.0" layoutY="50.0" size="40">
+                     <fill>
+                        <LinearGradient endX="0.5238095238095238" endY="1.0" startX="0.5238095238095237">
+                           <stops>
+                              <Stop color="#f7f9fc" />
+                              <Stop color="#f7f9fc" offset="0.02587194375320931" />
+                              <Stop color="#659cef" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </MaterialDesignIconView>
+                  <Label layoutX="329.0" layoutY="15.0" prefHeight="40.0" prefWidth="137.0" text="Documents">
+                     <font>
+                        <Font name="System Bold Italic" size="21.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.46190476190476193" endY="1.0" startX="0.4714285714285714">
+                           <stops>
+                              <Stop color="#f0f2f5" />
+                              <Stop color="#f0f2f5" offset="0.02587194375320931" />
+                              <Stop color="#659cef" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" color="#00000051" height="11.4" radius="2.35" width="0.0" />
+               </effect>
+            </Pane>
+            <JFXTabPane fx:id="docTabPane" layoutX="-41.0" layoutY="69.0" prefHeight="637.0" prefWidth="761.0" stylesheets="@../Style/switcher.css">
+               <tabs>
+                  <Tab fx:id="docTabLivre" onSelectionChanged="#livreSelected" text="Livre">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="665.0" style="-fx-background-color: #ecf0f1;">
+                           <children>
+                              <Pane prefHeight="582.0" prefWidth="686.0" style="-fx-background-color: #ecf0f1;">
+                                 <children>
+                                    <Pane layoutX="39.0" layoutY="14.0" prefHeight="88.0" prefWidth="676.0" style="-fx-background-color: #ffffff;">
+                                       <effect>
+                                          <DropShadow color="#00000053" height="9.14" radius="4.07" width="9.14" />
+                                       </effect>
+                                       <children>
+                                          <JFXButton fx:id="btn_dchercher_l" disable="true" layoutX="490.0" layoutY="38.0" onAction="#livreBY" prefHeight="27.0" prefWidth="86.0" stylesheets="@../Style/authent.css" text="Chercher">
+                                             <font>
+                                                <Font name="Century Gothic" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <TextField fx:id="txt_cherche_l" disable="true" layoutX="174.0" layoutY="38.0" prefHeight="27.0" prefWidth="183.0" promptText="Chercher" style="-fx-background-color: #ffffff; -fx-border-color: #659CEF; -fx-border-radius: 2em;">
+                                             <font>
+                                                <Font name="Century Gothic" size="11.0" />
+                                             </font>
+                                          </TextField>
+                                          <FontAwesomeIconView fill="#4bbceb" glyphName="SEARCH" layoutX="335.0" layoutY="56.0" size="15" />
+                                          <MenuButton fx:id="menuSelectLivreBy" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" layoutX="49.0" layoutY="39.0" mnemonicParsing="false" style="-fx-background-color: #659CEF;" text="Chercher par" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                             <items>
+                                                <MenuItem mnemonicParsing="false" onAction="#livreByTous" text="Tous        " />
+                                                <MenuItem mnemonicParsing="false" onAction="#livreByISBN" text="ISBN        " />
+                                                <MenuItem mnemonicParsing="false" onAction="#livreByTitre" text="Titre       " />
+                                             </items>
+                                          </MenuButton>
+                                          <FontAwesomeIconView fill="#393939" glyphName="SEARCH" layoutX="9.0" layoutY="19.0" size="15" />
+                                          <Label layoutX="28.0" layoutY="6.0" prefHeight="16.0" prefWidth="171.0" text="Chercher un livre" textFill="#393939">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="39.0" layoutY="114.0" prefHeight="346.0" prefWidth="676.0" style="-fx-background-color: #ffffff;">
+                                       <effect>
+                                          <DropShadow color="#00000053" height="9.14" radius="4.07" width="9.14" />
+                                       </effect>
+                                       <children>
+                                          <FontAwesomeIconView fill="#393939" glyphName="LIST_ALT" layoutX="9.0" layoutY="19.0" size="15" />
+                                          <Label layoutX="39.0" layoutY="6.0" prefHeight="16.0" prefWidth="171.0" text="List des livres disponible" textFill="#393939">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <TableView fx:id="tableulivre" layoutX="-1.0" layoutY="39.0" onMouseClicked="#tableLivreSelectionne" prefHeight="299.0" prefWidth="679.0" stylesheets="@../Style/tableu.css">
+                                             <columns>
+                                                <TableColumn fx:id="isbn" prefWidth="61.0" text="ISBN" />
+                                                <TableColumn fx:id="titre" prefWidth="103.0" text="Titre" />
+                                                <TableColumn fx:id="editeur" prefWidth="67.0" text="Editeur" />
+                                                <TableColumn fx:id="anne" prefWidth="76.0" text="Anne" />
+                                                <TableColumn fx:id="nbrpage" prefWidth="62.0" text="Nombre Page" />
+                                                <TableColumn fx:id="type" prefWidth="78.0" text="Type" />
+                                                <TableColumn fx:id="nbrdispo" prefWidth="76.0" text="Disponible" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="39.0" layoutY="467.0" prefHeight="78.0" prefWidth="676.0" style="-fx-background-color: #ffffff;">
+                                       <effect>
+                                          <DropShadow color="#00000053" height="9.14" radius="4.07" width="9.14" />
+                                       </effect>
+                                       <children>
+                                          <JFXButton fx:id="btn_emprunter_l" disable="true" layoutX="571.0" layoutY="29.0" onAction="#emprunterLivre" prefHeight="27.0" prefWidth="86.0" stylesheets="@../Style/emprunter.css" text="Emprunter">
+                                             <font>
+                                                <Font name="Century Gothic" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <FontAwesomeIconView fill="#393939" glyphName="CART_PLUS" layoutX="9.0" layoutY="19.0" size="15" />
+                                          <Label layoutX="28.0" layoutY="6.0" prefHeight="16.0" prefWidth="171.0" text="Emprunter" textFill="#393939">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="succeeprunter1" layoutX="28.0" layoutY="34.0" prefHeight="17.0" prefWidth="419.0" textFill="#4fb945">
+                                             <font>
+                                                <Font name="Century Gothic" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="echec_emprunter_l" layoutX="23.0" layoutY="34.0" prefHeight="17.0" prefWidth="306.0" textFill="#da3c3c">
+                                             <font>
+                                                <Font name="Century Gothic" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXTextField fx:id="txt_livre_mem_code" layoutX="372.0" layoutY="22.0" promptText="Membre Code" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab onSelectionChanged="#magSelected" text="Magazine">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane prefHeight="582.0" prefWidth="753.0" style="-fx-background-color: #ecf0f1;">
+                                 <children>
+                                    <Pane layoutX="39.0" layoutY="14.0" prefHeight="88.0" prefWidth="673.0" style="-fx-background-color: #ffffff;">
+                                       <effect>
+                                          <DropShadow color="#00000053" height="9.14" radius="4.07" width="9.14" />
+                                       </effect>
+                                       <children>
+                                          <JFXButton fx:id="btn_dchercher_m" disable="true" layoutX="497.0" layoutY="36.0" onAction="#magazineBY" prefHeight="27.0" prefWidth="86.0" stylesheets="@../Style/authent.css" text="Chercher">
+                                             <font>
+                                                <Font name="Century Gothic" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <MenuButton fx:id="menuSelectMagBy" layoutX="49.0" layoutY="39.0" mnemonicParsing="false" style="-fx-background-color: #659CEF;" text="Chercher par">
+                                             <items>
+                                                <MenuItem mnemonicParsing="false" onAction="#magByTous" text="Tous        " />
+                                                <MenuItem mnemonicParsing="false" onAction="#magByISBN" text="ISSN        " />
+                                                <MenuItem mnemonicParsing="false" onAction="#magByTitre" text="Titre       " />
+                                             </items>
+                                          </MenuButton>
+                                          <FontAwesomeIconView fill="#393939" glyphName="SEARCH" layoutX="9.0" layoutY="19.0" size="15" />
+                                          <Label layoutX="28.0" layoutY="6.0" prefHeight="16.0" prefWidth="171.0" text="Chercher une magazine" textFill="#393939">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_cherche_m" disable="true" layoutX="175.0" layoutY="37.0" prefHeight="27.0" prefWidth="183.0" promptText="Chercher" style="-fx-background-color: #ffffff; -fx-border-color: #659CEF; -fx-border-radius: 2em;">
+                                             <font>
+                                                <Font name="Century Gothic" size="11.0" />
+                                             </font>
+                                          </TextField>
+                                          <FontAwesomeIconView fill="#4bbceb" glyphName="SEARCH" layoutX="336.0" layoutY="55.0" size="15" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="39.0" layoutY="114.0" prefHeight="353.0" prefWidth="673.0" style="-fx-background-color: #ffffff;">
+                                       <effect>
+                                          <DropShadow color="#00000053" height="9.14" radius="4.07" width="9.14" />
+                                       </effect>
+                                       <children>
+                                          <FontAwesomeIconView fill="#393939" glyphName="LIST_ALT" layoutX="9.0" layoutY="19.0" size="15" />
+                                          <Label layoutX="28.0" layoutY="6.0" prefHeight="16.0" prefWidth="225.0" text="List des magazines disponible" textFill="#393939">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <TableView fx:id="tableumagazine" layoutX="-3.0" layoutY="44.0" onMouseClicked="#tableMagSelectionne" prefHeight="300.0" prefWidth="680.0" stylesheets="@../Style/tableu.css">
+                                             <columns>
+                                                <TableColumn fx:id="isbnm" prefWidth="61.0" text="ISBN" />
+                                                <TableColumn fx:id="titrem" prefWidth="114.0" text="Titre" />
+                                                <TableColumn fx:id="editeurm" prefWidth="68.0" text="editeur" />
+                                                <TableColumn fx:id="annem" prefWidth="68.0" text="Annee" />
+                                                <TableColumn fx:id="periode" prefWidth="66.0" text="periode" />
+                                                <TableColumn fx:id="dateedition" prefWidth="91.0" text="date d'edition" />
+                                                <TableColumn fx:id="nbrdispom" prefWidth="84.0" text=" Disponible" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="39.0" layoutY="475.0" prefHeight="78.0" prefWidth="673.0" style="-fx-background-color: #ffffff;">
+                                       <effect>
+                                          <DropShadow color="#00000053" height="9.14" radius="4.07" width="9.14" />
+                                       </effect>
+                                       <children>
+                                          <JFXButton fx:id="btn_emprunter_m" disable="true" layoutX="571.0" layoutY="29.0" onAction="#emprunterMag" prefHeight="27.0" prefWidth="86.0" stylesheets="@../Style/emprunter.css" text="Emprunter">
+                                             <font>
+                                                <Font name="Century Gothic" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <FontAwesomeIconView fill="#393939" glyphName="CART_PLUS" layoutX="9.0" layoutY="19.0" size="15" />
+                                          <Label layoutX="28.0" layoutY="6.0" prefHeight="16.0" prefWidth="171.0" text="Emprunter" textFill="#393939">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="succeeprunter2" layoutX="28.0" layoutY="34.0" prefHeight="17.0" prefWidth="419.0" textFill="#4fb945">
+                                             <font>
+                                                <Font name="Century Gothic" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="echec_emprunter_m" layoutX="23.0" layoutY="34.0" prefHeight="17.0" prefWidth="312.0" textFill="#da3c3c">
+                                             <font>
+                                                <Font name="Century Gothic" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXTextField fx:id="txt_mag_mem_code" layoutX="372.0" layoutY="22.0" promptText="Membre Code" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab onSelectionChanged="#decSelected" text="Dictionnaire">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@../Style/switcher.css">
+                           <children>
+                              <Pane prefHeight="567.0" prefWidth="753.0" style="-fx-background-color: #ecf0f1;">
+                                 <children>
+                                    <Pane layoutX="39.0" layoutY="14.0" prefHeight="88.0" prefWidth="673.0" style="-fx-background-color: #ffffff;">
+                                       <effect>
+                                          <DropShadow color="#00000053" height="9.14" radius="4.07" width="9.14" />
+                                       </effect>
+                                       <children>
+                                          <JFXButton fx:id="btn_dchercher_d" disable="true" layoutX="496.0" layoutY="37.0" onAction="#dictionnaireBY" prefHeight="27.0" prefWidth="86.0" stylesheets="@../Style/authent.css" text="Chercher">
+                                             <font>
+                                                <Font name="Century Gothic" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <MenuButton fx:id="menuSelectDicBy" layoutX="49.0" layoutY="39.0" mnemonicParsing="false" style="-fx-background-color: #659CEF;" text="Chercher par">
+                                             <items>
+                                                <MenuItem mnemonicParsing="false" onAction="#dicByTous" text="Tous        " />
+                                                <MenuItem mnemonicParsing="false" onAction="#dicByISBN" text="ISBN        " />
+                                                <MenuItem mnemonicParsing="false" onAction="#dicByTitre" text="Titre        " />
+                                             </items>
+                                          </MenuButton>
+                                          <FontAwesomeIconView fill="#393939" glyphName="SEARCH" layoutX="9.0" layoutY="19.0" size="15" />
+                                          <Label layoutX="28.0" layoutY="6.0" prefHeight="16.0" prefWidth="171.0" text="Chercher un dictionnaire" textFill="#393939">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_cherche_d" disable="true" layoutX="174.0" layoutY="38.0" prefHeight="27.0" prefWidth="183.0" promptText="Chercher" style="-fx-background-color: #ffffff; -fx-border-color: #659CEF; -fx-border-radius: 2em;">
+                                             <font>
+                                                <Font name="Century Gothic" size="11.0" />
+                                             </font>
+                                          </TextField>
+                                          <FontAwesomeIconView fill="#4bbceb" glyphName="SEARCH" layoutX="335.0" layoutY="56.0" size="15" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="39.0" layoutY="114.0" prefHeight="353.0" prefWidth="673.0" style="-fx-background-color: #ffffff;">
+                                       <effect>
+                                          <DropShadow color="#00000053" height="9.14" radius="4.07" width="9.14" />
+                                       </effect>
+                                       <children>
+                                          <FontAwesomeIconView fill="#393939" glyphName="LIST_ALT" layoutX="9.0" layoutY="19.0" size="15" />
+                                          <Label layoutX="28.0" layoutY="6.0" prefHeight="16.0" prefWidth="225.0" text="List des dictionnaires disponible" textFill="#393939">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <TableView fx:id="tableudictionnaire" layoutY="43.0" onMouseClicked="#tableDicSelectionne" prefHeight="308.0" prefWidth="673.0" stylesheets="@../Style/tableu.css">
+                                             <columns>
+                                                <TableColumn fx:id="isbnd" prefWidth="61.0" text="ISBN" />
+                                                <TableColumn fx:id="titred" prefWidth="114.0" text="Titre" />
+                                                <TableColumn fx:id="editeurd" prefWidth="68.0" text="editeur" />
+                                                <TableColumn fx:id="anned" prefWidth="68.0" text="Annee" />
+                                                <TableColumn fx:id="langue" prefWidth="66.0" text="Langue" />
+                                                <TableColumn fx:id="nbrdispod" prefWidth="79.0" text=" Disponible" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="39.0" layoutY="475.0" prefHeight="78.0" prefWidth="673.0" style="-fx-background-color: #ffffff;">
+                                       <effect>
+                                          <DropShadow color="#00000053" height="9.14" radius="4.07" width="9.14" />
+                                       </effect>
+                                       <children>
+                                          <JFXButton fx:id="btn_emprunter_d" disable="true" layoutX="571.0" layoutY="29.0" onAction="#emprunterDic" prefHeight="27.0" prefWidth="86.0" stylesheets="@../Style/emprunter.css" text="Emprunter">
+                                             <font>
+                                                <Font name="Century Gothic" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <FontAwesomeIconView fill="#393939" glyphName="CART_PLUS" layoutX="9.0" layoutY="19.0" size="15" />
+                                          <Label layoutX="28.0" layoutY="6.0" prefHeight="16.0" prefWidth="171.0" text="Emprunter" textFill="#393939">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="succeeprunter" layoutX="28.0" layoutY="34.0" prefHeight="17.0" prefWidth="419.0" textFill="#4fb945">
+                                             <font>
+                                                <Font name="Century Gothic" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="echec_emprunter_d" layoutX="23.0" layoutY="34.0" prefHeight="17.0" prefWidth="283.0" textFill="#da3c3c">
+                                             <font>
+                                                <Font name="Century Gothic" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXTextField fx:id="txt_dic_mem_code" layoutX="372.0" layoutY="22.0" promptText="Membre ID" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
